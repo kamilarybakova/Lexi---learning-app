@@ -1,0 +1,65 @@
+{
+  "appTitle": "Lexi",
+
+  "addWords": "Сөз кошуу",
+  "dictionary": "Сөздүк",
+
+  "emptyDictionaryTitle": "Сөздүк бош",
+  "emptyDictionarySubtitle": "Үйрөнүүнү баштоо үчүн биринчи сөздөрдү кошуңуз",
+
+  "searchHint": "Сөз издөө",
+
+  "todayTraining": "Бүгүнкү машыгуу",
+
+  "wordsWaiting": "{count} сөз сизди күтүп турат",
+  "@wordsWaiting": {
+    "description": "Number of words waiting for training",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "greetingMorning": "Кутмандуу таң ☀️",
+  "greetingAfternoon": "Кутмандуу күн 🌤️",
+  "greetingEvening": "Кутмандуу кеч 🌅",
+  "greetingNight": "Кутмандуу түн 🌙",
+
+  "dashboardSubtitle": "Сөздөрдү үйрөнөлү",
+
+  "todayProgress": "Бүгүнкү прогресс",
+
+  "wordsLearned": "{learned} ичинен {total} сөз үйрөнүлдү",
+  "@wordsLearned": {
+    "description": "Progress of learned words",
+    "placeholders": {
+      "learned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+
+  "profile": "Профиль",
+  "language": "Тил",
+  "learning": "Обучение",
+  "learningGoal": "Цель обучения",
+  "goalTravel": "Путешествия",
+  "learningLanguage": "Язык обучения",
+
+  "notifications": "Уведомления",
+  "dailyReminder": "Ежедневное напоминание",
+
+  "preferences": "Настройки",
+  "pronunciation": "Произношение",
+
+  "data": "Данные",
+  "exportWords": "Экспорт слов",
+  "resetProgress": "Сбросить прогресс",
+
+  "app": "Приложение",
+  "about": "О приложении"
+}

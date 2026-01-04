@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../dictionary/dictionary_screen.dart';
-import '../profile/profile_screen.dart';
-import '../training/training_screen.dart';
-import 'dashboard_screen.dart';
+import '../../dictionary/presentation/pages/dictionary_screen.dart';
+import '../../profile/presentation/pages/profile_screen.dart';
+import '../../training/training_screen.dart';
+import 'pages/dashboard_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

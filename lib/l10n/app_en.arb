@@ -1,0 +1,66 @@
+{
+  "@@locale": "en",
+  "appTitle": "Lexi",
+
+  "addWords": "Add Words",
+  "dictionary": "Dictionary",
+
+  "emptyDictionaryTitle": "Dictionary is empty",
+  "emptyDictionarySubtitle": "Add your first words to start learning",
+
+  "searchHint": "Search words",
+
+  "todayTraining": "Today's Training",
+
+  "wordsWaiting": "{count} words waiting for you",
+  "@wordsWaiting": {
+    "description": "Number of words waiting for training",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "greetingMorning": "Good Morning ☀️",
+  "greetingAfternoon": "Good Afternoon 🌤️",
+  "greetingEvening": "Good Evening 🌅",
+  "greetingNight": "Good Night 🌙",
+
+  "dashboardSubtitle": "Let's learn some words",
+
+  "todayProgress": "Today's Progress",
+
+  "wordsLearned": "{learned} of {total} words learned",
+  "@wordsLearned": {
+    "description": "Progress of learned words",
+    "placeholders": {
+      "learned": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+
+  "profile": "Profile",
+  "language": "Language",
+  "learning": "Обучение",
+  "learningGoal": "Цель обучения",
+  "goalTravel": "Путешествия",
+  "learningLanguage": "Язык обучения",
+
+  "notifications": "Уведомления",
+  "dailyReminder": "Ежедневное напоминание",
+
+  "preferences": "Настройки",
+  "pronunciation": "Произношение",
+
+  "data": "Данные",
+  "exportWords": "Экспорт слов",
+  "resetProgress": "Сбросить прогресс",
+
+  "app": "Приложение",
+  "about": "О приложении"
+}
