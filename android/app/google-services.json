@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1079466648500-0gp15jm0c0kbn7rnalfiqumcc4v69gaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lexi",
+            "certificate_hash": "d016c08038bf15995518a6f032a198ed6bb4eced"
+          }
+        },
+        {
           "client_id": "1079466648500-fkp2qr5a6ev4ihe8428kipm698ja8cqh.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "1079466648500-fkp2qr5a6ev4ihe8428kipm698ja8cqh.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1079466648500-p5t9ai2j99t4s89p2auua58pgafbmu61.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.lexi"
+              }
             }
           ]
         }
