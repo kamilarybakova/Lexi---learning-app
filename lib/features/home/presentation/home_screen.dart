@@ -1,55 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../add_words/presentation/pages/add_words_bottomsheet.dart';
-import '../../auth/auth_state.dart';
+import '../../auth/presentation/auth_bottomsheet.dart';
+import '../../auth/presentation/state/auth_providers.dart';
 import '../../dictionary/presentation/pages/dictionary_screen.dart';
 import '../../profile/presentation/pages/profile_screen.dart';
-import '../../auth/auth_bottomsheet.dart';
 import 'pages/dashboard_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends ConsumerState<HomeScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = const [
     DashboardScreen(),
     DictionaryScreen(),
-    // TrainingScreen(),
     ProfileScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
+    final isAuthenticated = ref.watch(isAuthenticatedProvider);
+
     return Scaffold(
       body: _screens[_currentIndex],
+
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFF7C7CFF),
+        backgroundColor: const Color(0xFF7C7CFF),
         foregroundColor: Colors.white,
         onPressed: () {
-          final isAuthenticated = AuthState.of(context).isAuthenticated;
-
           showModalBottomSheet(
             context: context,
-            isScrollControlled: true,
             backgroundColor: Colors.transparent,
+            isScrollControlled: true,
             builder: (_) {
-              if (isAuthenticated) {
-                return const AddWordsMethodBottomSheet();
-              } else {
-                return const AuthRequiredBottomSheet();
-              }
+              return isAuthenticated
+                  ? const AddWordsMethodBottomSheet()
+                  : const AuthRequiredBottomSheet();
             },
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
@@ -73,11 +73,6 @@ class _HomeScreenState extends State<HomeScreen> {
             activeIcon: Icon(Icons.menu_book),
             label: 'Words',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.school_outlined),
-          //   activeIcon: Icon(Icons.school),
-          //   label: 'Train',
-          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
             activeIcon: Icon(Icons.person),

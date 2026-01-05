@@ -1,23 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lexi/core/theme/app_colors.dart';
-import '../../l10n/app_localizations.dart';
-import '../add_words/presentation/widgets/drag_handle.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AuthRequiredBottomSheet extends StatelessWidget {
+import 'package:lexi/core/theme/app_colors.dart';
+import '../../../l10n/app_localizations.dart';
+import '../../add_words/presentation/widgets/drag_handle.dart';
+import '../presentation/state/auth_state.dart';
+import '../presentation/state/auth_providers.dart';
+
+class AuthRequiredBottomSheet extends ConsumerWidget {
   const AuthRequiredBottomSheet({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
+    final authState = ref.watch(authViewModelProvider);
+
+    ref.listen<AuthState>(authViewModelProvider, (prev, next) {
+      if (next is AuthAuthenticated) {
+        Navigator.pop(context);
+      }
+
+      if (next is AuthError) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(next.message)),
+        );
+      }
+    });
+
+    final isLoading = authState is AuthLoading;
 
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
       decoration: const BoxDecoration(
         color: Color(0xFF161822),
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(24),
-        ),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       child: SafeArea(
         top: false,
@@ -30,17 +47,18 @@ class AuthRequiredBottomSheet extends StatelessWidget {
 
             Text(
               l10n?.authTitle ?? '',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
 
             Text(
               l10n?.authSubtitle ?? '',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color(0xFFB3B6C2),
                 height: 1.4,
               ),
@@ -64,23 +82,23 @@ class AuthRequiredBottomSheet extends StatelessWidget {
             const SizedBox(height: 24),
 
             _GoogleSignInButton(
-              onPressed: () {
-                // TODO: Google sign in
-                // authService.signInWithGoogle();
+              isLoading: isLoading,
+              onPressed: isLoading
+                  ? null
+                  : () {
+                ref
+                    .read(authViewModelProvider.notifier)
+                    .signInWithGoogle();
               },
             ),
 
             const SizedBox(height: 12),
 
-            Center(
-              child: TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  l10n?.authLater ?? '',
-                  style: TextStyle(color: Color(0xFFB3B6C2)),
-                ),
+            TextButton(
+              onPressed: isLoading ? null : () => Navigator.pop(context),
+              child: Text(
+                l10n?.authLater ?? '',
+                style: const TextStyle(color: Color(0xFFB3B6C2)),
               ),
             ),
           ],
@@ -89,6 +107,7 @@ class AuthRequiredBottomSheet extends StatelessWidget {
     );
   }
 }
+
 
 
 class _FeatureRow extends StatelessWidget {
@@ -121,9 +140,13 @@ class _FeatureRow extends StatelessWidget {
 }
 
 class _GoogleSignInButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
+  final bool isLoading;
 
-  const _GoogleSignInButton({required this.onPressed});
+  const _GoogleSignInButton({
+    required this.onPressed,
+    required this.isLoading,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -139,15 +162,22 @@ class _GoogleSignInButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-        icon: SvgPicture.asset(
+        icon: isLoading
+            ? const SizedBox(
+          width: 20,
+          height: 20,
+          child: CircularProgressIndicator(
+            strokeWidth: 2,
+            color: Colors.white,
+          ),
+        )
+            : SvgPicture.asset(
           'assets/icons/ic_google.svg',
           height: 20,
         ),
-        label: const Text(
-          'Continue with Google',
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-          ),
+        label: Text(
+          isLoading ? '' : 'Continue with Google',
+          style: const TextStyle(fontWeight: FontWeight.w600),
         ),
       ),
     );
