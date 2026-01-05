@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../dictionary/presentation/pages/dictionary_screen.dart';
 import '../../profile/presentation/pages/profile_screen.dart';
 import '../../training/training_screen.dart';
+import '../../add_words/presentation/pages/unauth_bottomsheet.dart';
 import 'pages/dashboard_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = const [
     DashboardScreen(),
     DictionaryScreen(),
-    TrainingScreen(),
+    // TrainingScreen(),
     ProfileScreen(),
   ];
 
@@ -26,6 +27,20 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _screens[_currentIndex],
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        backgroundColor: Color(0xFF7C7CFF),
+        foregroundColor: Colors.white,
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            backgroundColor: Colors.transparent,
+            builder: (_) => const AuthRequiredBottomSheet(),
+          );
+        },
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
@@ -49,11 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
             activeIcon: Icon(Icons.menu_book),
             label: 'Words',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school_outlined),
-            activeIcon: Icon(Icons.school),
-            label: 'Train',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.school_outlined),
+          //   activeIcon: Icon(Icons.school),
+          //   label: 'Train',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
             activeIcon: Icon(Icons.person),
