@@ -1,11 +1,13 @@
 {
+  "@@locale": "tr",
+
   "appTitle": "Lexi",
 
   "addWords": "Kelime ekle",
   "dictionary": "Sözlük",
 
   "emptyDictionaryTitle": "Sözlük boş",
-  "emptyDictionarySubtitle": "Öğrenmeye başlamak için ilk kelimeleri ekleyin",
+  "emptyDictionarySubtitle": "Öğrenmeye başlamak için ilk kelimelerinizi ekleyin",
 
   "searchHint": "Kelime ara",
 
@@ -15,9 +17,7 @@
   "@wordsWaiting": {
     "description": "Number of words waiting for training",
     "placeholders": {
-      "count": {
-        "type": "int"
-      }
+      "count": { "type": "int" }
     }
   },
 
@@ -34,51 +34,66 @@
   "@wordsLearned": {
     "description": "Progress of learned words",
     "placeholders": {
-      "learned": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
     }
   },
 
   "profile": "Profil",
   "language": "Dil",
-  "learning": "Обучение",
-  "learningGoal": "Цель обучения",
-  "goalTravel": "Путешествия",
-  "learningLanguage": "Язык обучения",
 
-  "notifications": "Уведомления",
-  "dailyReminder": "Ежедневное напоминание",
+  "learning": "Öğrenme",
+  "learningGoal": "Öğrenme hedefi",
+  "goalTravel": "Seyahat",
+  "learningLanguage": "Öğrenme dili",
 
-  "preferences": "Настройки",
-  "pronunciation": "Произношение",
+  "notifications": "Bildirimler",
+  "dailyReminder": "Günlük hatırlatma",
 
-  "data": "Данные",
-  "exportWords": "Экспорт слов",
-  "resetProgress": "Сбросить прогресс",
+  "preferences": "Ayarlar",
+  "pronunciation": "Telaffuz",
 
-  "app": "Приложение",
-  "about": "О приложении",
+  "data": "Veriler",
+  "exportWords": "Kelimeleri dışa aktar",
+  "resetProgress": "İlerlemeyi sıfırla",
 
-  "authTitle": "Войдите, чтобы добавлять слова",
+  "app": "Uygulama",
+  "about": "Uygulama hakkında",
 
-  "authSubtitle": "Создайте аккаунт, чтобы сохранять слова,\nсинхронизировать их между устройствами\nи использовать ИИ-функции.",
+  "authTitle": "Kelime eklemek için giriş yapın",
 
-  "authFeatureSync": "Синхронизация слов между устройствами",
-  "authFeatureAI": "ИИ-перевод и автоматическая категоризация",
-  "authFeatureSecurity": "Безопасное облачное хранилище",
+  "authSubtitle": "Kelimeleri kaydetmek,\ncihazlar arasında senkronize etmek\nve yapay zeka özelliklerini kullanmak için hesap oluşturun.",
 
-  "authGoogle": "Войти через Google",
-  "authLater": "Позже",
+  "authFeatureSync": "Kelimeleri cihazlar arasında senkronize etme",
+  "authFeatureAI": "Yapay zeka ile çeviri ve otomatik kategorilendirme",
+  "authFeatureSecurity": "Güvenli bulut depolama",
 
-  "scanFromPhoto": "Scan from photo",
-  "addManually": "Add manually",
-  "pasteText": "Paste text",
+  "authGoogle": "Google ile giriş yap",
+  "authLater": "Daha sonra",
 
-  "manualInputHint": "Введите одно или несколько слов\n(каждое с новой строки)",
-  "check": "Проверить",
-  "detectedWords": "Найденные слова"
+  "scanFromPhoto": "Fotoğraftan tara",
+  "addManually": "Manuel olarak ekle",
+  "pasteText": "Metni yapıştır",
+
+  "manualInputHint": "Bir veya daha fazla kelime girin\n(her biri yeni satırda)",
+  "check": "Kontrol et",
+  "detectedWords": "Bulunan kelimeler",
+
+  "scanText": "Tara",
+  "scan": "Metni tarayın",
+  "scanError": "Tarama hatası",
+
+  "reviewWordsTitle": "Kelimeleri gözden geçir ({count})",
+  "@reviewWordsTitle": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+
+  "addWordsButton": "{count} kelime ekle",
+  "@addWordsButton": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  }
 }

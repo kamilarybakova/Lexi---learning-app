@@ -22,7 +22,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get emptyDictionarySubtitle =>
-      'Öğrenmeye başlamak için ilk kelimeleri ekleyin';
+      'Öğrenmeye başlamak için ilk kelimelerinizi ekleyin';
 
   @override
   String get searchHint => 'Kelime ara';
@@ -65,82 +65,102 @@ class AppLocalizationsTr extends AppLocalizations {
   String get language => 'Dil';
 
   @override
-  String get learning => 'Обучение';
+  String get learning => 'Öğrenme';
 
   @override
-  String get learningGoal => 'Цель обучения';
+  String get learningGoal => 'Öğrenme hedefi';
 
   @override
-  String get goalTravel => 'Путешествия';
+  String get goalTravel => 'Seyahat';
 
   @override
-  String get learningLanguage => 'Язык обучения';
+  String get learningLanguage => 'Öğrenme dili';
 
   @override
-  String get notifications => 'Уведомления';
+  String get notifications => 'Bildirimler';
 
   @override
-  String get dailyReminder => 'Ежедневное напоминание';
+  String get dailyReminder => 'Günlük hatırlatma';
 
   @override
-  String get preferences => 'Настройки';
+  String get preferences => 'Ayarlar';
 
   @override
-  String get pronunciation => 'Произношение';
+  String get pronunciation => 'Telaffuz';
 
   @override
-  String get data => 'Данные';
+  String get data => 'Veriler';
 
   @override
-  String get exportWords => 'Экспорт слов';
+  String get exportWords => 'Kelimeleri dışa aktar';
 
   @override
-  String get resetProgress => 'Сбросить прогресс';
+  String get resetProgress => 'İlerlemeyi sıfırla';
 
   @override
-  String get app => 'Приложение';
+  String get app => 'Uygulama';
 
   @override
-  String get about => 'О приложении';
+  String get about => 'Uygulama hakkında';
 
   @override
-  String get authTitle => 'Войдите, чтобы добавлять слова';
+  String get authTitle => 'Kelime eklemek için giriş yapın';
 
   @override
   String get authSubtitle =>
-      'Создайте аккаунт, чтобы сохранять слова,\nсинхронизировать их между устройствами\nи использовать ИИ-функции.';
+      'Kelimeleri kaydetmek,\ncihazlar arasında senkronize etmek\nve yapay zeka özelliklerini kullanmak için hesap oluşturun.';
 
   @override
-  String get authFeatureSync => 'Синхронизация слов между устройствами';
+  String get authFeatureSync => 'Kelimeleri cihazlar arasında senkronize etme';
 
   @override
-  String get authFeatureAI => 'ИИ-перевод и автоматическая категоризация';
+  String get authFeatureAI =>
+      'Yapay zeka ile çeviri ve otomatik kategorilendirme';
 
   @override
-  String get authFeatureSecurity => 'Безопасное облачное хранилище';
+  String get authFeatureSecurity => 'Güvenli bulut depolama';
 
   @override
-  String get authGoogle => 'Войти через Google';
+  String get authGoogle => 'Google ile giriş yap';
 
   @override
-  String get authLater => 'Позже';
+  String get authLater => 'Daha sonra';
 
   @override
-  String get scanFromPhoto => 'Scan from photo';
+  String get scanFromPhoto => 'Fotoğraftan tara';
 
   @override
-  String get addManually => 'Add manually';
+  String get addManually => 'Manuel olarak ekle';
 
   @override
-  String get pasteText => 'Paste text';
+  String get pasteText => 'Metni yapıştır';
 
   @override
   String get manualInputHint =>
-      'Введите одно или несколько слов\n(каждое с новой строки)';
+      'Bir veya daha fazla kelime girin\n(her biri yeni satırda)';
 
   @override
-  String get check => 'Проверить';
+  String get check => 'Kontrol et';
 
   @override
-  String get detectedWords => 'Найденные слова';
+  String get detectedWords => 'Bulunan kelimeler';
+
+  @override
+  String get scanText => 'Tara';
+
+  @override
+  String get scan => 'Metni tarayın';
+
+  @override
+  String get scanError => 'Tarama hatası';
+
+  @override
+  String reviewWordsTitle(int count) {
+    return 'Kelimeleri gözden geçir ($count)';
+  }
+
+  @override
+  String addWordsButton(int count) {
+    return '$count kelime ekle';
+  }
 }

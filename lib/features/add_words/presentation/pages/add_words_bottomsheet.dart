@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lexi/features/add_words/presentation/pages/scan_camera_screen.dart';
 
 import '../../../../l10n/app_localizations.dart';
 import '../widgets/drag_handle.dart';
@@ -39,7 +40,12 @@ class AddWordsMethodBottomSheet extends StatelessWidget {
               title: l10n?.scanFromPhoto ?? '',
               onTap: () {
                 Navigator.pop(context);
-                // TODO: open camera
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const ScanCameraScreen(),
+                  ),
+                );
               },
             ),
             MethodTile(

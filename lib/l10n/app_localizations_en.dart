@@ -12,7 +12,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appTitle => 'Lexi';
 
   @override
-  String get addWords => 'Add Words';
+  String get addWords => 'Add words';
 
   @override
   String get dictionary => 'Dictionary';
@@ -28,7 +28,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get searchHint => 'Search words';
 
   @override
-  String get todayTraining => 'Today\'s Training';
+  String get todayTraining => 'Today\'s training';
 
   @override
   String wordsWaiting(int count) {
@@ -36,22 +36,22 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get greetingMorning => 'Good Morning ☀️';
+  String get greetingMorning => 'Good morning ☀️';
 
   @override
-  String get greetingAfternoon => 'Good Afternoon 🌤️';
+  String get greetingAfternoon => 'Good afternoon 🌤️';
 
   @override
-  String get greetingEvening => 'Good Evening 🌅';
+  String get greetingEvening => 'Good evening 🌅';
 
   @override
-  String get greetingNight => 'Good Night 🌙';
+  String get greetingNight => 'Good night 🌙';
 
   @override
   String get dashboardSubtitle => 'Let\'s learn some words';
 
   @override
-  String get todayProgress => 'Today\'s Progress';
+  String get todayProgress => 'Today\'s progress';
 
   @override
   String wordsLearned(int learned, int total) {
@@ -65,65 +65,65 @@ class AppLocalizationsEn extends AppLocalizations {
   String get language => 'Language';
 
   @override
-  String get learning => 'Обучение';
+  String get learning => 'Learning';
 
   @override
-  String get learningGoal => 'Цель обучения';
+  String get learningGoal => 'Learning goal';
 
   @override
-  String get goalTravel => 'Путешествия';
+  String get goalTravel => 'Travel';
 
   @override
-  String get learningLanguage => 'Язык обучения';
+  String get learningLanguage => 'Learning language';
 
   @override
-  String get notifications => 'Уведомления';
+  String get notifications => 'Notifications';
 
   @override
-  String get dailyReminder => 'Ежедневное напоминание';
+  String get dailyReminder => 'Daily reminder';
 
   @override
-  String get preferences => 'Настройки';
+  String get preferences => 'Preferences';
 
   @override
-  String get pronunciation => 'Произношение';
+  String get pronunciation => 'Pronunciation';
 
   @override
-  String get data => 'Данные';
+  String get data => 'Data';
 
   @override
-  String get exportWords => 'Экспорт слов';
+  String get exportWords => 'Export words';
 
   @override
-  String get resetProgress => 'Сбросить прогресс';
+  String get resetProgress => 'Reset progress';
 
   @override
-  String get app => 'Приложение';
+  String get app => 'App';
 
   @override
-  String get about => 'О приложении';
+  String get about => 'About app';
 
   @override
-  String get authTitle => 'Войдите, чтобы добавлять слова';
+  String get authTitle => 'Sign in to add words';
 
   @override
   String get authSubtitle =>
-      'Создайте аккаунт, чтобы сохранять слова,\nсинхронизировать их между устройствами\nи использовать ИИ-функции.';
+      'Create an account to save your words,\nsync them between devices\nand use AI features.';
 
   @override
-  String get authFeatureSync => 'Синхронизация слов между устройствами';
+  String get authFeatureSync => 'Sync words between devices';
 
   @override
-  String get authFeatureAI => 'ИИ-перевод и автоматическая категоризация';
+  String get authFeatureAI => 'AI translation and automatic categorization';
 
   @override
-  String get authFeatureSecurity => 'Безопасное облачное хранилище';
+  String get authFeatureSecurity => 'Secure cloud storage';
 
   @override
-  String get authGoogle => 'Войти через Google';
+  String get authGoogle => 'Continue with Google';
 
   @override
-  String get authLater => 'Позже';
+  String get authLater => 'Maybe later';
 
   @override
   String get scanFromPhoto => 'Scan from photo';
@@ -135,12 +135,30 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pasteText => 'Paste text';
 
   @override
-  String get manualInputHint =>
-      'Введите одно или несколько слов\n(каждое с новой строки)';
+  String get manualInputHint => 'Enter one or more words\n(each on a new line)';
 
   @override
-  String get check => 'Проверить';
+  String get check => 'Check';
 
   @override
-  String get detectedWords => 'Найденные слова';
+  String get detectedWords => 'Detected words';
+
+  @override
+  String get scanText => 'Scan';
+
+  @override
+  String get scan => 'Scan text';
+
+  @override
+  String get scanError => 'Scan error';
+
+  @override
+  String reviewWordsTitle(int count) {
+    return 'Review words ($count)';
+  }
+
+  @override
+  String addWordsButton(int count) {
+    return 'Add $count words';
+  }
 }

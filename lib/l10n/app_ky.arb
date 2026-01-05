@@ -1,4 +1,6 @@
 {
+  "@@locale": "ky",
+
   "appTitle": "Lexi",
 
   "addWords": "Сөз кошуу",
@@ -15,9 +17,7 @@
   "@wordsWaiting": {
     "description": "Number of words waiting for training",
     "placeholders": {
-      "count": {
-        "type": "int"
-      }
+      "count": { "type": "int" }
     }
   },
 
@@ -30,55 +30,70 @@
 
   "todayProgress": "Бүгүнкү прогресс",
 
-  "wordsLearned": "{learned} ичинен {total} сөз үйрөнүлдү",
+  "wordsLearned": "{total} ичинен {learned} сөз үйрөнүлдү",
   "@wordsLearned": {
     "description": "Progress of learned words",
     "placeholders": {
-      "learned": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
     }
   },
 
   "profile": "Профиль",
   "language": "Тил",
-  "learning": "Обучение",
-  "learningGoal": "Цель обучения",
-  "goalTravel": "Путешествия",
-  "learningLanguage": "Язык обучения",
 
-  "notifications": "Уведомления",
-  "dailyReminder": "Ежедневное напоминание",
+  "learning": "Үйрөнүү",
+  "learningGoal": "Үйрөнүү максаты",
+  "goalTravel": "Саякат",
+  "learningLanguage": "Үйрөнүү тили",
 
-  "preferences": "Настройки",
-  "pronunciation": "Произношение",
+  "notifications": "Билдирмелер",
+  "dailyReminder": "Күнүмдүк эскертүү",
 
-  "data": "Данные",
-  "exportWords": "Экспорт слов",
-  "resetProgress": "Сбросить прогресс",
+  "preferences": "Жөндөөлөр",
+  "pronunciation": "Айтылышы",
 
-  "app": "Приложение",
-  "about": "О приложении",
+  "data": "Маалыматтар",
+  "exportWords": "Сөздөрдү экспорттоо",
+  "resetProgress": "Прогрессти башынан баштоо",
 
-  "authTitle": "Войдите, чтобы добавлять слова",
+  "app": "Колдонмо",
+  "about": "Колдонмо жөнүндө",
 
-  "authSubtitle": "Создайте аккаунт, чтобы сохранять слова,\nсинхронизировать их между устройствами\nи использовать ИИ-функции.",
+  "authTitle": "Сөз кошуу үчүн кириңиз",
 
-  "authFeatureSync": "Синхронизация слов между устройствами",
-  "authFeatureAI": "ИИ-перевод и автоматическая категоризация",
-  "authFeatureSecurity": "Безопасное облачное хранилище",
+  "authSubtitle": "Сөздөрдү сактоо,\nтүзмөктөр ортосунда синхрондоштуруу\nжана ИИ функцияларын колдонуу үчүн аккаунт түзүңүз.",
 
-  "authGoogle": "Войти через Google",
-  "authLater": "Позже",
+  "authFeatureSync": "Сөздөрдү түзмөктөр ортосунда синхрондоштуруу",
+  "authFeatureAI": "ИИ аркылуу которуу жана автоматтык категориялоо",
+  "authFeatureSecurity": "Коопсуз булут сактагыч",
 
-  "scanFromPhoto": "Scan from photo",
-  "addManually": "Add manually",
-  "pasteText": "Paste text",
+  "authGoogle": "Google аркылуу кирүү",
+  "authLater": "Кийинчерээк",
 
-  "manualInputHint": "Введите одно или несколько слов\n(каждое с новой строки)",
-  "check": "Проверить",
-  "detectedWords": "Найденные слова"
+  "scanFromPhoto": "Сүрөттөн сканерлөө",
+  "addManually": "Кол менен кошуу",
+  "pasteText": "Текстти чаптоо",
+
+  "manualInputHint": "Бир же бир нече сөз жазыңыз\n(ар бирин жаңы саптан)",
+  "check": "Текшерүү",
+  "detectedWords": "Табылган сөздөр",
+
+  "scanText": "Сканерлөө",
+  "scan": "Текстти сканерлеңиз",
+  "scanError": "Сканерлөөдө ката кетти",
+
+  "reviewWordsTitle": "Сөздөрдү текшерүү ({count})",
+  "@reviewWordsTitle": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+
+  "addWordsButton": "{count} сөз кошуу",
+  "@addWordsButton": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  }
 }

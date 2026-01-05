@@ -1,4 +1,6 @@
 {
+  "@@locale": "ru",
+
   "appTitle": "Lexi",
 
   "addWords": "Добавить слова",
@@ -15,9 +17,7 @@
   "@wordsWaiting": {
     "description": "Number of words waiting for training",
     "placeholders": {
-      "count": {
-        "type": "int"
-      }
+      "count": { "type": "int" }
     }
   },
 
@@ -34,16 +34,14 @@
   "@wordsLearned": {
     "description": "Progress of learned words",
     "placeholders": {
-      "learned": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
     }
   },
+
   "profile": "Профиль",
   "language": "Язык",
+
   "learning": "Обучение",
   "learningGoal": "Цель обучения",
   "goalTravel": "Путешествия",
@@ -73,11 +71,29 @@
   "authGoogle": "Войти через Google",
   "authLater": "Позже",
 
-  "scanFromPhoto": "Scan from photo",
-  "addManually": "Add manually",
-  "pasteText": "Paste text",
+  "scanFromPhoto": "Сканировать с фото",
+  "addManually": "Добавить вручную",
+  "pasteText": "Вставить текст",
 
   "manualInputHint": "Введите одно или несколько слов\n(каждое с новой строки)",
   "check": "Проверить",
-  "detectedWords": "Найденные слова"
+  "detectedWords": "Найденные слова",
+
+  "scanText": "Сканировать",
+  "scan": "Отсканируйте текст",
+  "scanError": "Ошибка сканирования",
+
+  "reviewWordsTitle": "Проверьте слова ({count})",
+  "@reviewWordsTitle": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+
+  "addWordsButton": "Добавить {count} слов",
+  "@addWordsButton": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  }
 }

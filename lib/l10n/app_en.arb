@@ -2,7 +2,7 @@
   "@@locale": "en",
   "appTitle": "Lexi",
 
-  "addWords": "Add Words",
+  "addWords": "Add words",
   "dictionary": "Dictionary",
 
   "emptyDictionaryTitle": "Dictionary is empty",
@@ -10,7 +10,7 @@
 
   "searchHint": "Search words",
 
-  "todayTraining": "Today's Training",
+  "todayTraining": "Today's training",
 
   "wordsWaiting": "{count} words waiting for you",
   "@wordsWaiting": {
@@ -22,64 +22,79 @@
     }
   },
 
-  "greetingMorning": "Good Morning ☀️",
-  "greetingAfternoon": "Good Afternoon 🌤️",
-  "greetingEvening": "Good Evening 🌅",
-  "greetingNight": "Good Night 🌙",
+  "greetingMorning": "Good morning ☀️",
+  "greetingAfternoon": "Good afternoon 🌤️",
+  "greetingEvening": "Good evening 🌅",
+  "greetingNight": "Good night 🌙",
 
   "dashboardSubtitle": "Let's learn some words",
 
-  "todayProgress": "Today's Progress",
+  "todayProgress": "Today's progress",
 
   "wordsLearned": "{learned} of {total} words learned",
   "@wordsLearned": {
     "description": "Progress of learned words",
     "placeholders": {
-      "learned": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
+      "learned": { "type": "int" },
+      "total": { "type": "int" }
     }
   },
 
   "profile": "Profile",
   "language": "Language",
-  "learning": "Обучение",
-  "learningGoal": "Цель обучения",
-  "goalTravel": "Путешествия",
-  "learningLanguage": "Язык обучения",
 
-  "notifications": "Уведомления",
-  "dailyReminder": "Ежедневное напоминание",
+  "learning": "Learning",
+  "learningGoal": "Learning goal",
+  "goalTravel": "Travel",
+  "learningLanguage": "Learning language",
 
-  "preferences": "Настройки",
-  "pronunciation": "Произношение",
+  "notifications": "Notifications",
+  "dailyReminder": "Daily reminder",
 
-  "data": "Данные",
-  "exportWords": "Экспорт слов",
-  "resetProgress": "Сбросить прогресс",
+  "preferences": "Preferences",
+  "pronunciation": "Pronunciation",
 
-  "app": "Приложение",
-  "about": "О приложении",
+  "data": "Data",
+  "exportWords": "Export words",
+  "resetProgress": "Reset progress",
 
-  "authTitle": "Войдите, чтобы добавлять слова",
+  "app": "App",
+  "about": "About app",
 
-  "authSubtitle": "Создайте аккаунт, чтобы сохранять слова,\nсинхронизировать их между устройствами\nи использовать ИИ-функции.",
+  "authTitle": "Sign in to add words",
 
-  "authFeatureSync": "Синхронизация слов между устройствами",
-  "authFeatureAI": "ИИ-перевод и автоматическая категоризация",
-  "authFeatureSecurity": "Безопасное облачное хранилище",
+  "authSubtitle": "Create an account to save your words,\nsync them between devices\nand use AI features.",
 
-  "authGoogle": "Войти через Google",
-  "authLater": "Позже",
+  "authFeatureSync": "Sync words between devices",
+  "authFeatureAI": "AI translation and automatic categorization",
+  "authFeatureSecurity": "Secure cloud storage",
+
+  "authGoogle": "Continue with Google",
+  "authLater": "Maybe later",
 
   "scanFromPhoto": "Scan from photo",
   "addManually": "Add manually",
   "pasteText": "Paste text",
 
-  "manualInputHint": "Введите одно или несколько слов\n(каждое с новой строки)",
-  "check": "Проверить",
-  "detectedWords": "Найденные слова"
+  "manualInputHint": "Enter one or more words\n(each on a new line)",
+  "check": "Check",
+  "detectedWords": "Detected words",
+
+  "scanText": "Scan",
+  "scan": "Scan text",
+  "scanError": "Scan error",
+
+  "reviewWordsTitle": "Review words ({count})",
+  "@reviewWordsTitle": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+
+  "addWordsButton": "Add {count} words",
+  "@addWordsButton": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  }
 }

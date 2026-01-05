@@ -23,7 +23,7 @@ class _AddManuallyBottomSheetState extends State<AddManuallyBottomSheet> {
         .split(RegExp(r'[\n,;]'))
         .map((e) => e.trim())
         .where((e) => e.isNotEmpty)
-        .toSet() // remove duplicates
+        .toSet()
         .toList();
 
     setState(() {

@@ -111,7 +111,7 @@ abstract class AppLocalizations {
   /// No description provided for @addWords.
   ///
   /// In en, this message translates to:
-  /// **'Add Words'**
+  /// **'Add words'**
   String get addWords;
 
   /// No description provided for @dictionary.
@@ -141,7 +141,7 @@ abstract class AppLocalizations {
   /// No description provided for @todayTraining.
   ///
   /// In en, this message translates to:
-  /// **'Today\'s Training'**
+  /// **'Today\'s training'**
   String get todayTraining;
 
   /// Number of words waiting for training
@@ -153,25 +153,25 @@ abstract class AppLocalizations {
   /// No description provided for @greetingMorning.
   ///
   /// In en, this message translates to:
-  /// **'Good Morning ☀️'**
+  /// **'Good morning ☀️'**
   String get greetingMorning;
 
   /// No description provided for @greetingAfternoon.
   ///
   /// In en, this message translates to:
-  /// **'Good Afternoon 🌤️'**
+  /// **'Good afternoon 🌤️'**
   String get greetingAfternoon;
 
   /// No description provided for @greetingEvening.
   ///
   /// In en, this message translates to:
-  /// **'Good Evening 🌅'**
+  /// **'Good evening 🌅'**
   String get greetingEvening;
 
   /// No description provided for @greetingNight.
   ///
   /// In en, this message translates to:
-  /// **'Good Night 🌙'**
+  /// **'Good night 🌙'**
   String get greetingNight;
 
   /// No description provided for @dashboardSubtitle.
@@ -183,7 +183,7 @@ abstract class AppLocalizations {
   /// No description provided for @todayProgress.
   ///
   /// In en, this message translates to:
-  /// **'Today\'s Progress'**
+  /// **'Today\'s progress'**
   String get todayProgress;
 
   /// Progress of learned words
@@ -207,121 +207,121 @@ abstract class AppLocalizations {
   /// No description provided for @learning.
   ///
   /// In en, this message translates to:
-  /// **'Обучение'**
+  /// **'Learning'**
   String get learning;
 
   /// No description provided for @learningGoal.
   ///
   /// In en, this message translates to:
-  /// **'Цель обучения'**
+  /// **'Learning goal'**
   String get learningGoal;
 
   /// No description provided for @goalTravel.
   ///
   /// In en, this message translates to:
-  /// **'Путешествия'**
+  /// **'Travel'**
   String get goalTravel;
 
   /// No description provided for @learningLanguage.
   ///
   /// In en, this message translates to:
-  /// **'Язык обучения'**
+  /// **'Learning language'**
   String get learningLanguage;
 
   /// No description provided for @notifications.
   ///
   /// In en, this message translates to:
-  /// **'Уведомления'**
+  /// **'Notifications'**
   String get notifications;
 
   /// No description provided for @dailyReminder.
   ///
   /// In en, this message translates to:
-  /// **'Ежедневное напоминание'**
+  /// **'Daily reminder'**
   String get dailyReminder;
 
   /// No description provided for @preferences.
   ///
   /// In en, this message translates to:
-  /// **'Настройки'**
+  /// **'Preferences'**
   String get preferences;
 
   /// No description provided for @pronunciation.
   ///
   /// In en, this message translates to:
-  /// **'Произношение'**
+  /// **'Pronunciation'**
   String get pronunciation;
 
   /// No description provided for @data.
   ///
   /// In en, this message translates to:
-  /// **'Данные'**
+  /// **'Data'**
   String get data;
 
   /// No description provided for @exportWords.
   ///
   /// In en, this message translates to:
-  /// **'Экспорт слов'**
+  /// **'Export words'**
   String get exportWords;
 
   /// No description provided for @resetProgress.
   ///
   /// In en, this message translates to:
-  /// **'Сбросить прогресс'**
+  /// **'Reset progress'**
   String get resetProgress;
 
   /// No description provided for @app.
   ///
   /// In en, this message translates to:
-  /// **'Приложение'**
+  /// **'App'**
   String get app;
 
   /// No description provided for @about.
   ///
   /// In en, this message translates to:
-  /// **'О приложении'**
+  /// **'About app'**
   String get about;
 
   /// No description provided for @authTitle.
   ///
   /// In en, this message translates to:
-  /// **'Войдите, чтобы добавлять слова'**
+  /// **'Sign in to add words'**
   String get authTitle;
 
   /// No description provided for @authSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Создайте аккаунт, чтобы сохранять слова,\nсинхронизировать их между устройствами\nи использовать ИИ-функции.'**
+  /// **'Create an account to save your words,\nsync them between devices\nand use AI features.'**
   String get authSubtitle;
 
   /// No description provided for @authFeatureSync.
   ///
   /// In en, this message translates to:
-  /// **'Синхронизация слов между устройствами'**
+  /// **'Sync words between devices'**
   String get authFeatureSync;
 
   /// No description provided for @authFeatureAI.
   ///
   /// In en, this message translates to:
-  /// **'ИИ-перевод и автоматическая категоризация'**
+  /// **'AI translation and automatic categorization'**
   String get authFeatureAI;
 
   /// No description provided for @authFeatureSecurity.
   ///
   /// In en, this message translates to:
-  /// **'Безопасное облачное хранилище'**
+  /// **'Secure cloud storage'**
   String get authFeatureSecurity;
 
   /// No description provided for @authGoogle.
   ///
   /// In en, this message translates to:
-  /// **'Войти через Google'**
+  /// **'Continue with Google'**
   String get authGoogle;
 
   /// No description provided for @authLater.
   ///
   /// In en, this message translates to:
-  /// **'Позже'**
+  /// **'Maybe later'**
   String get authLater;
 
   /// No description provided for @scanFromPhoto.
@@ -345,20 +345,50 @@ abstract class AppLocalizations {
   /// No description provided for @manualInputHint.
   ///
   /// In en, this message translates to:
-  /// **'Введите одно или несколько слов\n(каждое с новой строки)'**
+  /// **'Enter one or more words\n(each on a new line)'**
   String get manualInputHint;
 
   /// No description provided for @check.
   ///
   /// In en, this message translates to:
-  /// **'Проверить'**
+  /// **'Check'**
   String get check;
 
   /// No description provided for @detectedWords.
   ///
   /// In en, this message translates to:
-  /// **'Найденные слова'**
+  /// **'Detected words'**
   String get detectedWords;
+
+  /// No description provided for @scanText.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan'**
+  String get scanText;
+
+  /// No description provided for @scan.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan text'**
+  String get scan;
+
+  /// No description provided for @scanError.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan error'**
+  String get scanError;
+
+  /// No description provided for @reviewWordsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Review words ({count})'**
+  String reviewWordsTitle(int count);
+
+  /// No description provided for @addWordsButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Add {count} words'**
+  String addWordsButton(int count);
 }
 
 class _AppLocalizationsDelegate

@@ -126,13 +126,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get authLater => 'Позже';
 
   @override
-  String get scanFromPhoto => 'Scan from photo';
+  String get scanFromPhoto => 'Сканировать с фото';
 
   @override
-  String get addManually => 'Add manually';
+  String get addManually => 'Добавить вручную';
 
   @override
-  String get pasteText => 'Paste text';
+  String get pasteText => 'Вставить текст';
 
   @override
   String get manualInputHint =>
@@ -143,4 +143,23 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get detectedWords => 'Найденные слова';
+
+  @override
+  String get scanText => 'Сканировать';
+
+  @override
+  String get scan => 'Отсканируйте текст';
+
+  @override
+  String get scanError => 'Ошибка сканирования';
+
+  @override
+  String reviewWordsTitle(int count) {
+    return 'Проверьте слова ($count)';
+  }
+
+  @override
+  String addWordsButton(int count) {
+    return 'Добавить $count слов';
+  }
 }
