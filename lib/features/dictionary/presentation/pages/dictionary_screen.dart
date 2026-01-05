@@ -10,9 +10,9 @@ class DictionaryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<WordItem> words = [
-      WordItem(word: 'apple', translation: 'яблоко', category: 'Food'),
-      WordItem(word: 'run', translation: 'бежать', category: 'Verb'),
-      WordItem(word: 'airport', translation: 'аэропорт', category: 'Travel'),
+      WordItem(word: 'armut', translation: 'груша', category: 'Food'),
+      WordItem(word: 'merhaba', translation: 'привет', category: 'Greeting'),
+      WordItem(word: 'havaalani', translation: 'аэропорт', category: 'Travel'),
     ];
 
     return Scaffold(

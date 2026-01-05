@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lexi/core/theme/app_colors.dart';
+import 'package:lexi/core/tts/tts_service.dart';
+
+import '../../../profile/presentation/pages/pronunciation_screen.dart';
 import '../../domain/word_item.dart';
 
-class WordTile extends StatelessWidget {
+class WordTile extends ConsumerWidget {
   const WordTile({super.key, required this.word});
 
   final WordItem word;
 
+  static final TtsService _tts = TtsService();
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final language = ref.watch(ttsLanguageProvider);
+    final voice = ref.watch(ttsVoiceProvider);
+    final speed = ref.watch(ttsSpeedProvider);
+    final pitch = ref.watch(ttsPitchProvider);
+
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -44,8 +55,16 @@ class WordTile extends StatelessWidget {
               Icons.volume_up_rounded,
               color: AppColors.accent,
             ),
-            onPressed: () {
-              debugPrint('Play sound for: ${word.word}');
+            onPressed: () async {
+              await _tts.stop();
+
+              await _tts.speak(
+                text: word.word,
+                languageCode: language,
+                voiceName: voice,
+                speed: speed,
+                pitch: pitch,
+              );
             },
           ),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lexi/features/profile/presentation/pages/pronunciation_screen.dart';
 import 'package:lexi/features/profile/presentation/widgets/switch_tile.dart';
 import 'package:lexi/features/profile/presentation/widgets/tile.dart';
 import 'package:lexi/l10n/app_localizations.dart';
@@ -66,11 +67,14 @@ class ProfileScreen extends StatelessWidget {
           Tile(
             icon: Icons.volume_up,
             title: l10n.pronunciation,
-            subtitle: 'US · Normal',
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const PronunciationScreen()),
+              );
+            },
             isDestructive: false,
           ),
-
           const SizedBox(height: 24),
 
           Section(title: l10n.data),
