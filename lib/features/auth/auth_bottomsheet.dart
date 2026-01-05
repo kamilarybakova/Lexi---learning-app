@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lexi/core/theme/app_colors.dart';
-import '../../../../l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
+import '../add_words/presentation/widgets/drag_handle.dart';
 
 class AuthRequiredBottomSheet extends StatelessWidget {
   const AuthRequiredBottomSheet({super.key});
@@ -28,7 +29,7 @@ class AuthRequiredBottomSheet extends StatelessWidget {
             const SizedBox(height: 16),
 
             Text(
-              l10n.authTitle,
+              l10n?.authTitle ?? '',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -36,9 +37,9 @@ class AuthRequiredBottomSheet extends StatelessWidget {
             ),
             const SizedBox(height: 8),
 
-            const Text(
-              'Create an account to save your words,\n'
-                  'sync between devices and use AI features.',
+            Text(
+              l10n?.authSubtitle ?? '',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Color(0xFFB3B6C2),
                 height: 1.4,
@@ -49,15 +50,15 @@ class AuthRequiredBottomSheet extends StatelessWidget {
 
             _FeatureRow(
               icon: Icons.cloud_done,
-              text: 'Sync words between devices',
+              text: l10n?.authFeatureSync ?? '',
             ),
             _FeatureRow(
               icon: Icons.psychology,
-              text: 'AI translation and categorization',
+              text: l10n?.authFeatureAI ?? '',
             ),
             _FeatureRow(
               icon: Icons.security,
-              text: 'Safe cloud storage',
+              text: l10n?.authFeatureSecurity ?? '',
             ),
 
             const SizedBox(height: 24),
@@ -76,8 +77,8 @@ class AuthRequiredBottomSheet extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Text(
-                  'Maybe later',
+                child: Text(
+                  l10n?.authLater ?? '',
                   style: TextStyle(color: Color(0xFFB3B6C2)),
                 ),
               ),

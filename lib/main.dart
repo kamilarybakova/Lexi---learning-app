@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'features/auth/auth_state.dart';
 import 'features/home/presentation/home_screen.dart';
 import 'features/profile/presentation/widgets/language.dart';
 import 'l10n/app_localizations.dart';
@@ -23,26 +25,34 @@ class _LexiAppState extends State<LexiApp> {
     });
   }
 
+  final bool _isAuthenticated = true;
+
   @override
   Widget build(BuildContext context) {
     return LocaleController(
       setLocale: _setLocale,
-      child: MaterialApp(
-        title: 'Lexi',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          brightness: Brightness.dark,
-          scaffoldBackgroundColor: const Color(0xFF0E0F14),
-          colorScheme: const ColorScheme.dark(
-            primary: Color(0xFF7C7CFF),
-            secondary: Color(0xFFA5A5FF),
-            surface: Color(0xFF0E0F14),
+      child: AuthState(
+        isAuthenticated: _isAuthenticated,
+        child: MaterialApp(
+          title: 'Lexi',
+          debugShowCheckedModeBanner: false,
+
+          theme: ThemeData(
+            brightness: Brightness.dark,
+            scaffoldBackgroundColor: const Color(0xFF0E0F14),
+            colorScheme: const ColorScheme.dark(
+              primary: Color(0xFF7C7CFF),
+              secondary: Color(0xFFA5A5FF),
+              surface: Color(0xFF0E0F14),
+            ),
           ),
+
+          locale: _locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+
+          home: const HomeScreen(),
         ),
-        locale: _locale,
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        supportedLocales: AppLocalizations.supportedLocales,
-        home: const HomeScreen(),
       ),
     );
   }

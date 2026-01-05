@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../add_words/presentation/pages/add_words_bottomsheet.dart';
+import '../../auth/auth_state.dart';
 import '../../dictionary/presentation/pages/dictionary_screen.dart';
 import '../../profile/presentation/pages/profile_screen.dart';
-import '../../add_words/presentation/pages/unauth_bottomsheet.dart';
+import '../../auth/auth_bottomsheet.dart';
 import 'pages/dashboard_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -31,11 +33,19 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Color(0xFF7C7CFF),
         foregroundColor: Colors.white,
         onPressed: () {
+          final isAuthenticated = AuthState.of(context).isAuthenticated;
+
           showModalBottomSheet(
             context: context,
             isScrollControlled: true,
             backgroundColor: Colors.transparent,
-            builder: (_) => const AuthRequiredBottomSheet(),
+            builder: (_) {
+              if (isAuthenticated) {
+                return const AddWordsMethodBottomSheet();
+              } else {
+                return const AuthRequiredBottomSheet();
+              }
+            },
           );
         },
         child: Icon(Icons.add),

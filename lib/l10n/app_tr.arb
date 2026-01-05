@@ -61,5 +61,24 @@
   "resetProgress": "Сбросить прогресс",
 
   "app": "Приложение",
-  "about": "О приложении"
+  "about": "О приложении",
+
+  "authTitle": "Войдите, чтобы добавлять слова",
+
+  "authSubtitle": "Создайте аккаунт, чтобы сохранять слова,\nсинхронизировать их между устройствами\nи использовать ИИ-функции.",
+
+  "authFeatureSync": "Синхронизация слов между устройствами",
+  "authFeatureAI": "ИИ-перевод и автоматическая категоризация",
+  "authFeatureSecurity": "Безопасное облачное хранилище",
+
+  "authGoogle": "Войти через Google",
+  "authLater": "Позже",
+
+  "scanFromPhoto": "Scan from photo",
+  "addManually": "Add manually",
+  "pasteText": "Paste text",
+
+  "manualInputHint": "Введите одно или несколько слов\n(каждое с новой строки)",
+  "check": "Проверить",
+  "detectedWords": "Найденные слова"
 }

@@ -71,5 +71,13 @@
   "authFeatureSecurity": "Безопасное облачное хранилище",
 
   "authGoogle": "Войти через Google",
-  "authLater": "Позже"
+  "authLater": "Позже",
+
+  "scanFromPhoto": "Scan from photo",
+  "addManually": "Add manually",
+  "pasteText": "Paste text",
+
+  "manualInputHint": "Введите одно или несколько слов\n(каждое с новой строки)",
+  "check": "Проверить",
+  "detectedWords": "Найденные слова"
 }
