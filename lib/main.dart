@@ -36,7 +36,7 @@ class _LexiAppState extends State<LexiApp> {
           colorScheme: const ColorScheme.dark(
             primary: Color(0xFF7C7CFF),
             secondary: Color(0xFFA5A5FF),
-            background: Color(0xFF0E0F14),
+            surface: Color(0xFF0E0F14),
           ),
         ),
         locale: _locale,

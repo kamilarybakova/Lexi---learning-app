@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/add_words_button.dart';
 import '../widgets/greeting.dart';
 import '../widgets/progress_card.dart';
 import '../widgets/today_training_card.dart';
@@ -20,8 +19,6 @@ class DashboardScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ProgressCard(),
             const SizedBox(height: 20),
-            AddWordsButton(),
-            const SizedBox(height: 24),
             TodayTrainingCard(),
           ],
         ),

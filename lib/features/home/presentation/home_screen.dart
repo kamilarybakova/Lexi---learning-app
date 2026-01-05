@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../dictionary/presentation/pages/dictionary_screen.dart';
 import '../../profile/presentation/pages/profile_screen.dart';
-import '../../training/training_screen.dart';
 import '../../add_words/presentation/pages/unauth_bottomsheet.dart';
 import 'pages/dashboard_screen.dart';
 
@@ -29,7 +28,6 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _screens[_currentIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
         backgroundColor: Color(0xFF7C7CFF),
         foregroundColor: Colors.white,
         onPressed: () {
@@ -40,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             builder: (_) => const AuthRequiredBottomSheet(),
           );
         },
+        child: Icon(Icons.add),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,

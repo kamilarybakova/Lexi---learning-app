@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lexi/core/theme/app_colors.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class AuthRequiredBottomSheet extends StatelessWidget {
   const AuthRequiredBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
       decoration: const BoxDecoration(
@@ -20,11 +24,11 @@ class AuthRequiredBottomSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            _DragHandle(),
+            DragHandle(),
             const SizedBox(height: 16),
 
-            const Text(
-              'Sign in to add words',
+            Text(
+              l10n.authTitle,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -85,21 +89,6 @@ class AuthRequiredBottomSheet extends StatelessWidget {
   }
 }
 
-class _DragHandle extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: 40,
-        height: 4,
-        decoration: BoxDecoration(
-          color: const Color(0xFF2A2E42),
-          borderRadius: BorderRadius.circular(2),
-        ),
-      ),
-    );
-  }
-}
 
 class _FeatureRow extends StatelessWidget {
   final IconData icon;
@@ -143,7 +132,7 @@ class _GoogleSignInButton extends StatelessWidget {
       child: ElevatedButton.icon(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.black,
+          backgroundColor: AppColors.accent,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),

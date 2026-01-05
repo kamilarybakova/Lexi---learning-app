@@ -8,7 +8,7 @@ class NetworkFailure extends Failure {
 }
 
 class ServerFailure extends Failure {
-  ServerFailure(String msg) : super(msg);
+  ServerFailure(super.msg);
 }
 
 class UnknownFailure extends Failure {
