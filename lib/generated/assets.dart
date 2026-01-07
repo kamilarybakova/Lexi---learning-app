@@ -3,5 +3,6 @@ class Assets {
   Assets._();
 
   static const String iconsIcGoogle = 'assets/icons/ic_google.svg';
+  static const String iconsLexi = 'assets/icons/lexi.png';
 
 }

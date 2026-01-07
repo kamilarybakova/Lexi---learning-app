@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lexi/features/training/presentation/pages/training_screen.dart';
 
 import '../../add_words/presentation/pages/add_words_bottomsheet.dart';
 import '../../auth/presentation/auth_bottomsheet.dart';
@@ -21,6 +22,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   final List<Widget> _screens = const [
     DashboardScreen(),
     DictionaryScreen(),
+    TrainingScreen(),
     ProfileScreen(),
   ];
 
@@ -72,6 +74,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             icon: Icon(Icons.menu_book_outlined),
             activeIcon: Icon(Icons.menu_book),
             label: 'Words',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school_outlined),
+            activeIcon: Icon(Icons.school),
+            label: 'Train',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
