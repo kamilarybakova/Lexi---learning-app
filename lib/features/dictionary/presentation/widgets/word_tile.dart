@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lexi/core/theme/app_colors.dart';
 import 'package:lexi/core/tts/tts_service.dart';
+import 'package:lexi/features/dictionary/domain/entities/word.dart';
 
 import '../../../profile/presentation/pages/pronunciation_screen.dart';
-import '../../domain/word_item.dart';
 
 class WordTile extends ConsumerWidget {
   const WordTile({super.key, required this.word});
 
-  final WordItem word;
+  final Word word;
 
   static final TtsService _tts = TtsService();
 

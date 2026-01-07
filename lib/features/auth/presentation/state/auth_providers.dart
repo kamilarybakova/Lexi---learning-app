@@ -20,9 +20,6 @@ Provider((ref) => GoogleSignIn());
 
 final isAuthenticatedProvider = StateProvider<bool>((ref) => false);
 
-/// Dio
-final dioProvider = Provider<Dio>((ref) => dio);
-
 /// Datasources
 final firebaseAuthDatasourceProvider = Provider(
       (ref) => FirebaseAuthDatasource(
